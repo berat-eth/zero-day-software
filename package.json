@@ -1,0 +1,33 @@
+{
+  "name": "zero-day-software",
+  "version": "1.0.0",
+  "description": "Zero Day Software - Yazılım Ajansı Web Sitesi",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yazılım",
+    "ajans",
+    "web",
+    "tasarım",
+    "e-ticaret",
+    "mobil",
+    "uygulama"
+  ],
+  "author": "Zero Day Software",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^7.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
