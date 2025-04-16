@@ -1,0 +1,170 @@
+<!-- Hero Section -->
+<section class="hero-section bg-gradient">
+  <div class="container py-5">
+    <div class="row py-5 mt-5 text-center">
+      <div class="col-lg-8 mx-auto">
+        <h1 class="display-4 fw-bold text-white mb-4">İletişime Geçin</h1>
+        <p class="lead text-white mb-0">Projeleriniz ve sorularınız için bizimle iletişime geçin</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section py-5">
+  <div class="container py-5">
+    <div class="row gy-4">
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <h3 class="mb-4">İletişim Bilgileri</h3>
+        
+        <div class="contact-info-box mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon-box me-3">
+              <i class="fas fa-map-marker-alt text-primary"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Adres</h5>
+              <p class="mb-0">Maslak, Büyükdere Cad. No:255, 34398 Sarıyer/İstanbul</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info-box mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon-box me-3">
+              <i class="fas fa-phone text-primary"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Telefon</h5>
+              <p class="mb-0">+90 (555) 123 4567</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info-box mb-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon-box me-3">
+              <i class="fas fa-envelope text-primary"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">E-posta</h5>
+              <p class="mb-0">info@zerodaysoftware.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-info-box">
+          <div class="d-flex align-items-center mb-3">
+            <div class="icon-box me-3">
+              <i class="fas fa-clock text-primary"></i>
+            </div>
+            <div>
+              <h5 class="mb-1">Çalışma Saatleri</h5>
+              <p class="mb-0">Pazartesi - Cuma: 09:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links mt-4">
+          <h5 class="mb-3">Sosyal Medya</h5>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-primary fs-4"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-primary fs-4"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-primary fs-4"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-primary fs-4"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="contact-form shadow-sm">
+          <h3 class="mb-4">Mesaj Gönderin</h3>
+          
+          <% if (typeof success !== 'undefined') { %>
+            <div class="alert alert-success">
+              <%= success %>
+            </div>
+          <% } %>
+          
+          <form id="contactForm" action="/contact" method="post">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Adınız" required>
+                  <label for="name">Adınız</label>
+                  <div class="invalid-feedback">Lütfen adınızı girin.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                  <label for="email">E-posta Adresiniz</label>
+                  <div class="invalid-feedback">Lütfen geçerli bir e-posta adresi girin.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <select class="form-select" id="subject" name="subject" required>
+                    <option value="" selected disabled>Konu seçin</option>
+                    <option value="Web Tasarım">Web Tasarım</option>
+                    <option value="Özel Yazılım">Özel Yazılım</option>
+                    <option value="Mobil Uygulama">Mobil Uygulama</option>
+                    <option value="E-Ticaret">E-Ticaret</option>
+                    <option value="SEO & Pazarlama">SEO & Pazarlama</option>
+                    <option value="Destek">Teknik Destek</option>
+                    <option value="Diğer">Diğer</option>
+                  </select>
+                  <label for="subject">Konu</label>
+                  <div class="invalid-feedback">Lütfen bir konu seçin.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" style="height: 150px" required></textarea>
+                  <label for="message">Mesajınız</label>
+                  <div class="invalid-feedback">Lütfen mesajınızı girin.</div>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="privacy" required>
+                  <label class="form-check-label" for="privacy">
+                    <a href="/privacy" class="text-decoration-underline">Gizlilik Politikası</a>'nı okudum ve kabul ediyorum.
+                  </label>
+                  <div class="invalid-feedback">
+                    Devam etmek için gizlilik politikasını kabul etmelisiniz.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">Gönder</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+  <div class="container-fluid p-0">
+    <div class="ratio ratio-21x9">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.8321147412633!2d29.005939215378553!3d41.0803234792968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab5e7192aff95%3A0xc91e630836bf3a6c!2zTWFzbGFrLCBCw7x5w7xrZGVyZSBDZC4sIDM0Mzk4IFNhcsSxeWVyL8Swc3RhbmJ1bA!5e0!3m2!1str!2str!4v1650451256824!5m2!1str!2str" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section py-5 bg-primary text-white text-center">
+  <div class="container py-4">
+    <h2 class="fw-bold mb-4">Hızlı Destek İçin WhatsApp</h2>
+    <p class="lead mb-4">Anında yanıt almak için WhatsApp hattımızdan bize ulaşabilirsiniz</p>
+    <a href="https://wa.me/905551234567" target="_blank" class="btn btn-light btn-lg rounded-pill px-5">
+      <i class="fab fa-whatsapp me-2"></i> WhatsApp ile Mesaj Gönderin
+    </a>
+  </div>
+</section> 

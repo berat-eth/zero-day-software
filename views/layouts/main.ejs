@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="/images/logo.svg" alt="Zero Day Software Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/' ? 'active' : '' %>" href="/">Ana Sayfa</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle <%= path.includes('/services') ? 'active' : '' %>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Hizmetler
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/services/web-design">Web Tasarım</a></li>
+                <li><a class="dropdown-item" href="/services/custom-software">Özel Yazılım Geliştirme</a></li>
+                <li><a class="dropdown-item" href="/services/mobile-app">Mobil Uygulama Geliştirme</a></li>
+                <li><a class="dropdown-item" href="/services/e-commerce">E-Ticaret Sistemleri</a></li>
+                <li><a class="dropdown-item" href="/services/seo-marketing">SEO & Dijital Pazarlama</a></li>
+                <li><a class="dropdown-item" href="/services/api-integrations">API Entegrasyonları</a></li>
+                <li><a class="dropdown-item" href="/services/technical-support">Teknik Destek</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/packages' ? 'active' : '' %>" href="/packages">Paketler</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/portfolio' ? 'active' : '' %>" href="/portfolio">Referanslar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/blog' ? 'active' : '' %>" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/about' ? 'active' : '' %>" href="/about">Hakkımızda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link <%= path === '/contact' ? 'active' : '' %>" href="/contact">İletişim</a>
+            </li>
+          </ul>
+          <div class="ms-3">
+            <a href="/contact" class="btn btn-primary rounded-pill px-4">Ücretsiz Deneyin</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <%- body %>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-4">Zero Day Software</h5>
+          <p>İşinizi dijitale taşıyın. Modern ve profesyonel yazılım çözümleri ile sizin yanınızdayız.</p>
+          <div class="d-flex">
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-4">Hizmetlerimiz</h5>
+          <ul class="list-unstyled">
+            <li><a href="/services/web-design" class="text-white text-decoration-none mb-2 d-block">Web Tasarım</a></li>
+            <li><a href="/services/custom-software" class="text-white text-decoration-none mb-2 d-block">Özel Yazılım</a></li>
+            <li><a href="/services/mobile-app" class="text-white text-decoration-none mb-2 d-block">Mobil Uygulamalar</a></li>
+            <li><a href="/services/e-commerce" class="text-white text-decoration-none mb-2 d-block">E-Ticaret</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-4">Hızlı Linkler</h5>
+          <ul class="list-unstyled">
+            <li><a href="/about" class="text-white text-decoration-none mb-2 d-block">Hakkımızda</a></li>
+            <li><a href="/portfolio" class="text-white text-decoration-none mb-2 d-block">Referanslar</a></li>
+            <li><a href="/blog" class="text-white text-decoration-none mb-2 d-block">Blog</a></li>
+            <li><a href="/contact" class="text-white text-decoration-none mb-2 d-block">İletişim</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-4">İletişim</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> İstanbul, Türkiye</li>
+            <li class="mb-2"><i class="fas fa-phone me-2"></i> +90 (555) 123 4567</li>
+            <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@zerodaysoftware.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2023 Zero Day Software. Tüm Hakları Saklıdır.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="/privacy" class="text-white text-decoration-none me-3">Gizlilik Politikası</a>
+          <a href="/terms" class="text-white text-decoration-none">Kullanım Koşulları</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html> 
